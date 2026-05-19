@@ -11,29 +11,44 @@
     <div class="brand">CodeAlpha Store</div>
     <nav>
       <a href="index.html">Home</a>
+      <a href="orders.html">Orders</a>
       <a href="cart.html">Cart <span id="cart-count">0</span></a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
+      <span id="user-area">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </span>
     </nav>
   </header>
 
   <main>
-    <section class="auth-card">
-      <h2>Register</h2>
-      <form id="register-form">
-        <label>Username</label>
-        <input type="text" id="register-username" required />
-        <label>Email</label>
-        <input type="email" id="register-email" required />
-        <label>Password</label>
-        <input type="password" id="register-password" required />
-        <button type="submit" class="primary-button">Register</button>
-        <p class="info-text">Already have an account? <a href="login.html">Login</a></p>
-      </form>
-      <p id="register-error" class="error-text"></p>
+    <section class="auth-page">
+      <div class="auth-panel">
+        <span class="eyebrow">Create account</span>
+        <h1>Join CodeAlpha Store</h1>
+        <p>Register to save your cart, track orders, and get notified instantly when your purchase ships.</p>
+        <div class="auth-features">
+          <div><strong>One-time signup</strong><p>Quick registration with email and password.</p></div>
+          <div><strong>Smart checkout</strong><p>Use saved credentials to buy faster.</p></div>
+        </div>
+      </div>
+      <section class="auth-card">
+        <h2>Register</h2>
+        <form id="register-form" class="auth-form">
+          <label>Username</label>
+          <input type="text" id="register-username" required />
+          <label>Email</label>
+          <input type="email" id="register-email" required />
+          <label>Password</label>
+          <input type="password" id="register-password" required />
+          <button type="submit" class="primary-button">Register</button>
+          <p class="info-text">Already have an account? <a href="login.html">Login</a></p>
+        </form>
+        <p id="register-error" class="error-text"></p>
+      </section>
     </section>
   </main>
 
+  <script src="/socket.io/socket.io.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

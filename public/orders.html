@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Details | CodeAlpha Store</title>
+  <title>Order History | CodeAlpha Store</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -23,12 +23,15 @@
   <main>
     <section class="page-heading">
       <div>
-        <span class="eyebrow">Product showcase</span>
-        <h1>Product details</h1>
-        <p>Review everything you need to know before placing your order.</p>
+        <span class="eyebrow">Purchase history</span>
+        <h1>Your order details</h1>
+        <p>Track each order with itemized totals, delivery estimate, and order status.</p>
       </div>
     </section>
-    <section id="product-detail" class="product-detail"></section>
+
+    <section class="orders-page">
+      <div id="orders-list" class="orders-list"></div>
+    </section>
   </main>
 
   <script src="/socket.io/socket.io.js"></script>

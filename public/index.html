@@ -11,24 +11,62 @@
     <div class="brand">CodeAlpha Store</div>
     <nav>
       <a href="index.html">Home</a>
+      <a href="orders.html">Orders</a>
       <a href="cart.html">Cart <span id="cart-count">0</span></a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
+      <span id="user-area">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </span>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Welcome to the Simple E-commerce Store</h1>
-      <p>Browse products, add them to your cart, and submit an order.</p>
+    <section class="hero hero-large">
+      <div>
+        <span class="eyebrow">Premium Shop Experience</span>
+        <h1>Discover modern essentials with style.</h1>
+        <p>Browse trending gear, manage your cart, and place orders with instant updates.</p>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <h3>Product discovery</h3>
+            <p>Find the right item fast with search and smart sorting.</p>
+          </div>
+          <div class="hero-card">
+            <h3>Real-time activity</h3>
+            <p>Live order notifications and a dynamic shopping experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store-tools">
+      <div class="search-panel">
+        <input id="product-search" type="search" placeholder="Search for products..." />
+        <select id="product-sort">
+          <option value="">Sort by</option>
+          <option value="price_asc">Price: low to high</option>
+          <option value="price_desc">Price: high to low</option>
+          <option value="name_asc">Name: A to Z</option>
+          <option value="name_desc">Name: Z to A</option>
+        </select>
+      </div>
+      <div class="tool-actions">
+        <button id="clear-filters" class="secondary-button">Clear filters</button>
+      </div>
     </section>
 
     <section>
-      <h2>Products</h2>
+      <div class="section-header">
+        <h2>Featured Products</h2>
+        <p>Curated recommendations for your next purchase.</p>
+      </div>
       <div id="product-grid" class="product-grid"></div>
     </section>
   </main>
 
+  <script src="/socket.io/socket.io.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
