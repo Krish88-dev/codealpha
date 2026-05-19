@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f5f7;
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: #111827;
+  color: white;
+}
+
+.site-header .brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.site-header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 0.95rem;
+}
+
+main {
+  padding: 24px;
+}
+
+.hero {
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card,
+.cart-item,
+.auth-card,
+.product-detail {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 18px;
+}
+
+.product-card img,
+.product-detail img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 180px;
+}
+
+.product-card h3,
+.product-detail h2 {
+  margin: 14px 0 8px;
+}
+
+.product-card p,
+.product-detail p,
+.cart-item p,
+.info-text,
+.error-text {
+  margin: 8px 0;
+}
+
+.primary-button,
+.quantity-button,
+.remove-button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.quantity-button,
+.remove-button {
+  background: #374151;
+}
+
+.auth-card {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.auth-card label,
+.auth-card input {
+  display: block;
+  width: 100%;
+}
+
+.auth-card input {
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.cart-list {
+  display: grid;
+  gap: 16px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.cart-summary {
+  margin-top: 20px;
+}
+
+.error-text {
+  margin-top: 12px;
+  color: #b91c1c;
+}
+
+.info-text {
+  color: #374151;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .site-header nav {
+    margin-top: 12px;
+  }
+}
